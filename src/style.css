@@ -1,4 +1,67 @@
-.hello {
-  color: red;
-  background: url('./icon.png');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+  padding: 3px;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+header {
+  width: 80%;
+  margin: auto;
+  max-width: 650px;
+}
+
+#main {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  max-width: 600px;
+}
+
+#scoreList {
+  display: flex;
+  flex-direction: column;
+}
+
+#scoreList h2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+table {
+  outline: auto;
+}
+
+tr:nth-child(even) {
+  background: rgb(255, 255, 255);
+}
+
+tr:nth-child(odd) {
+  background: rgb(221, 221, 221);
+}
+
+#form {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  flex-basis: 50%;
+}
+
+button {
+  width: 80px;
+}
+
+#form button {
+  margin-top: 1rem;
+  align-self: end;
+}
+
+#scoreAdd h2 {
+  text-align: center;
 }
