@@ -1,5 +1,5 @@
 // import _ from 'lodash';
-// import './style.css';
+import './style.css';
 import ui from './modules/ui.js';
 import SirenomanGame from './modules/apiMethods.js';
 
