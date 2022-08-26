@@ -1,18 +1,18 @@
 const ui = {
   render(scoreData) {
     const scores = document.getElementById('scores');
-
+    scores.innerHTML = '';
     for (let i = 0; i < scoreData.length; i += 1) {
-      const name = document.createElement('td');
-      name.textContent = scoreData[i].name;
-      name.classList.add('name');
+      const user = document.createElement('td');
+      user.textContent = scoreData[i].user;
+      user.classList.add('user');
 
       const score = document.createElement('td');
       score.textContent = scoreData[i].score;
       score.classList.add('score');
 
       const line = document.createElement('tr');
-      line.appendChild(name);
+      line.appendChild(user);
       line.appendChild(score);
 
       scores.appendChild(line);
