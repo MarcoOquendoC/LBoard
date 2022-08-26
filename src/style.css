@@ -1,4 +1,93 @@
-.hello {
-  color: red;
-  background: url('./icon.png');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Silkscreen&display=swap');
+
+* {
+  padding: 3px;
+  box-sizing: border-box;
+  color: rgb(0, 21, 255);
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-size: cover;
+  background-image: url(./images/liquid-cheese.svg);
+}
+
+header {
+  width: 80%;
+  margin: auto;
+  max-width: 650px;
+}
+
+#main {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  max-width: 600px;
+}
+
+#scoreList {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', sans-serif;
+}
+
+#scoreList h2 {
+  display: flex;
+  font-size: 1.3rem;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Silkscreen', cursive;
+}
+
+table {
+  outline: auto;
+}
+
+tr:nth-child(even) {
+  background: rgb(255, 255, 255);
+}
+
+tr:nth-child(odd) {
+  background: rgb(221, 221, 221);
+}
+
+#form {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  flex-basis: 50%;
+}
+
+button {
+  width: 80px;
+  background-color: #f9901f;
+}
+
+button:hover {
+  background-color: #f9f91f;
+}
+
+button:active {
+  background-color: #f9901f;
+  transform: translate(3px, 3px);
+}
+
+button:focus {
+  box-shadow: 0 0 20px black;
+}
+
+#form button {
+  align-self: end;
+  margin-top: 1rem;
+}
+
+#scoreAdd h2 {
+  text-align: center;
+  font-family: 'Silkscreen', cursive;
 }

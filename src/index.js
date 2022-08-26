@@ -1,21 +1,27 @@
-import _ from 'lodash';
+// import _ from 'lodash';
 import './style.css';
-import Icon from './icon.png';
+import ui from './modules/ui.js';
+import SirenomanGame from './modules/apiMethods.js';
 
-function component() {
-  const element = document.createElement('div');
+const manageData = async () => {
+  const data = await SirenomanGame.getScores();
+  const x = [...data];
+  x.sort((a, b) => b.score - a.score);
+  const topTen = x.slice(0, 10);
+  ui.render(topTen);
+};
 
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  element.classList.add('hello');
+manageData();
 
-  // Add the image to our existing div.
-  const myIcon = new Image();
-  myIcon.src = Icon;
+const form = document.getElementById('form');
+form.addEventListener('submit', () => {
+  const user = document.getElementById('user').value;
+  const score = document.getElementById('score').value;
+  SirenomanGame.addScore(user, score).then(manageData);
+  form.reset();
+});
 
-  element.appendChild(myIcon);
-
-  return element;
-}
-
-document.body.appendChild(component());
+const refreshBtn = document.getElementById('refreshBtn');
+refreshBtn.addEventListener('click', () => {
+  manageData();
+});
