@@ -1,9 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Silkscreen&display=swap');
 
 * {
   padding: 3px;
   box-sizing: border-box;
+  color: rgb(0, 21, 255);
   font-family: 'Inter', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-size: cover;
+  background-image: url(./images/liquid-cheese.svg);
 }
 
 header {
@@ -22,12 +30,15 @@ header {
 #scoreList {
   display: flex;
   flex-direction: column;
+  font-family: 'Inter', sans-serif;
 }
 
 #scoreList h2 {
   display: flex;
+  font-size: 1.3rem;
   align-items: center;
   justify-content: space-between;
+  font-family: 'Silkscreen', cursive;
 }
 
 table {
@@ -55,13 +66,28 @@ section {
 
 button {
   width: 80px;
+  background-color: #f9901f;
+}
+
+button:hover {
+  background-color: #f9f91f;
+}
+
+button:active {
+  background-color: #f9901f;
+  transform: translate(3px, 3px);
+}
+
+button:focus {
+  box-shadow: 0 0 20px black;
 }
 
 #form button {
-  margin-top: 1rem;
   align-self: end;
+  margin-top: 1rem;
 }
 
 #scoreAdd h2 {
   text-align: center;
+  font-family: 'Silkscreen', cursive;
 }
