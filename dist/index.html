@@ -16,7 +16,7 @@
     <section id="scoreList">
         <h2>
           Recent scores
-          <button type="button">
+          <button id="refreshBtn" type="button">
             Refresh
           </button>
         </h2>
@@ -26,11 +26,11 @@
     </section>
     <section id="scoreAdd">
       <h2>Add your score</h2>
-      <form id="form" action="#" method="post">
-        <label for="name">Name:</label>
-        <input id="name" type="text" placeholder="Your name">
+      <form id="form" action="#" method="get">
+        <label for="user">User:</label>
+        <input autocomplete="off" id="user" type="text" placeholder="Your name" required>
         <label for="score">Score:</label>
-        <input id="score" type="text" placeholder="Your score">
+        <input id="score" type="text" placeholder="Your score" required>
         <button type="submit">Submit</button>
       </form>
     </section>
