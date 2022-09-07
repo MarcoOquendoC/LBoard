@@ -5,7 +5,7 @@ import SirenomanGame from './modules/apiMethods.js';
 
 const manageData = async () => {
   const data = await SirenomanGame.getScores();
-  const x = data.filter(x => { 0 <= x.score && x.score <= 100 });
+  const x = data.filter((x) => (0 <= x.score && x.score <= 100));
   x.sort((a, b) => b.score - a.score);
   const topTen = x.slice(0, 10);
   ui.render(topTen);
