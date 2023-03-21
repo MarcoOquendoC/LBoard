@@ -5,7 +5,7 @@ import SirenomanGame from './modules/apiMethods.js';
 
 const manageData = async () => {
   const data = await SirenomanGame.getScores();
-  const topTen = data.slice(0, 100);
+  const topTen = data.slice(0, 10);
   ui.render(topTen);
 };
 
