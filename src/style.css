@@ -41,6 +41,10 @@ header {
   font-family: 'Silkscreen', cursive;
 }
 
+#scores {
+  max-height: 200px;
+}
+
 table {
   outline: auto;
 }
